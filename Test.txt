@@ -1,4 +1,4 @@
-sql basic commends
+### sql basic commends
 
 create database sample;
 

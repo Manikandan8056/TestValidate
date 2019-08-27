@@ -1,1 +1,41 @@
-Git Test
+sql basic commends
+
+create database sample;
+
+show databases;
+
+use sample;
+
+
+create table employee (id int,name varchar(100));
+
+desc employee;
+
+insert into employee values(1, 'mani');
+select * from employee;
+
+select * from employee where id=1;
+
+update employee set name = 'Mani B' where id =1;
+
+alter table employee add date_of_joining date;
+update employee set date_of_joining=str_to_date('12/08/2019','%d/%m/%Y');
+
+alter table employee add created_date timestamp;
+update employee set created_date=current_timestamp() ;
+
+select * from employee;
+insert into employee (id,name) values (3,'jorge');
+insert into employee (id,name) values(2, 'dravid');
+select * from employee;
+delete from employee where id=3;
+insert into employee (id,name) values (3,'siva');
+update employee set created_date='2019-08-20 10:15:29' where name = 'siva';
+update employee set name = 'Mani B' where id =1;
+update employee set name = 'Dravid' where id =2;
+
+
+alter table employee add gender char;
+update employee set gender='M';
+
+select * from employee order by id desc;
